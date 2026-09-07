@@ -22,6 +22,8 @@ npm run check
 
 Edit `src/lib/content.ts`: shared facts and parallel EN/PT copy. Keep experience IDs stable (`access`, `gavea`, `leadup`, `cefet`) so shared links continue working. Dates intentionally overlap. Do not turn the approximate test-writing improvement into an overall productivity claim.
 
+Each story accepts a `products` list with a stable ID, name, context, description, contribution and optional public URL. Use confirmed product names and links; the current rows describe work documented in the CV. Do not label employer projects as independently owned products.
+
 Layout is in `src/app/[lang]/page.tsx`, styles in `src/app/globals.css`, and progressive interactions in `src/components/Enhancements.tsx`. Replace `public/portrait.jpg` to change the photograph. The contact address and external profiles live with the content.
 
 After changing content, regenerate the downloadable resumes and sharing images:
@@ -54,4 +56,4 @@ The production baseline recorded before the clean timeline redesign was `dpl_ALY
 
 ## Interaction and accessibility
 
-The scroll remains native. ResizeObserver recalculates the line when disclosures or viewport dimensions change; fonts are awaited before restoring reading position. EN/PT links preserve the active section, its viewport offset and open disclosures in session storage. Reduced-motion preference shows a complete static line. Old `#about`, `#work` and `#contact` links remain valid. There is no tracking or contact form backend.
+The scroll remains native. A normalized SVG stroke draws the opening curve; IntersectionObserver and the Web Animations API reveal dates, nodes, milestones and product rows once as they enter the viewport. Reduced-motion preference disables these entrances, and content remains visible without JavaScript. ResizeObserver recalculates the line when disclosures or viewport dimensions change; fonts are awaited before restoring reading position. EN/PT links preserve the active section, its viewport offset and open disclosures in session storage. Reduced-motion preference shows a complete static line. Old `#about`, `#work` and `#contact` links remain valid. There is no tracking or contact form backend.

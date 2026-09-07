@@ -9,17 +9,26 @@
       "formerly": "FORMERLY",
       "location": "PORTO ALEGRE, BRAZIL",
       "eyebrow": "SENIOR SOFTWARE ENGINEER · TECH LEAD & ARCHITECT",
-      "headline": "I build software people can rely on.",
+      "headline": "I build products people can rely on.",
       "intro": "For over 15 years, I’ve been building web applications and connecting the details of a good user experience to the systems behind it. Today, I lead engineers, shape architecture and stay close to the code.",
       "explore": "Explore my journey",
       "portrait": "Allan Winckler in New York, with the Statue of Liberty in the background",
-      "photoCaption": "SOFTWARE · SYSTEMS · PEOPLE",
+      "photoCaption": "ENGINEERING · PRODUCT · PEOPLE",
       "impact": "WHAT I HELPED CHANGE",
       "contribution": "Explore my contribution",
       "closeContribution": "Close details",
       "education": "ALONG THE WAY",
       "stories": {
         "access": {
+          "products": [
+            {
+              "id": "menu-updates",
+              "name": "Menu updates",
+              "context": "Hospitality · POS integrations",
+              "description": "Keeping menus in sync across connected services is part of a reliable ordering experience.",
+              "contribution": "I designed asynchronous updates with Amazon SQS, replacing repeated polling with events and defining how services recover from failures."
+            }
+          ],
           "summary": "I lead a team of four across frontend and backend, working on the services that connect loyalty, CRM, menus and point-of-sale systems. My role brings together architectural decisions and hands-on delivery: breaking down complex features, reviewing code and helping the team build with consistency.",
           "impact": "Designed a push-based, asynchronous menu update system with Amazon SQS, replacing polling to reduce coupling and improve reliable data propagation between POS services.",
           "details": [
@@ -29,6 +38,15 @@
           ]
         },
         "gavea": {
+          "products": [
+            {
+              "id": "frontend-platform",
+              "name": "A faster, consistent web experience",
+              "context": "Web applications · Design system",
+              "description": "The product needed a shared interface foundation that could evolve without carrying the same legacy work into every screen.",
+              "contribution": "I built reusable React components documented in Storybook and improved Lighthouse performance from 58 to 94."
+            }
+          ],
           "summary": "I worked on the foundations of a faster, more maintainable frontend. Alongside building React applications with TypeScript, I migrated legacy interfaces into a Storybook-driven design system. Shared components and clearer patterns helped bring consistency to both the product and the way engineers worked on it.",
           "impact": "Improved the Lighthouse performance score from 58 to 94 through code splitting, lazy loading and asset optimization.",
           "details": [
@@ -38,6 +56,15 @@
           ]
         },
         "leadup": {
+          "products": [
+            {
+              "id": "web-mobile",
+              "name": "Web and mobile products",
+              "context": "Product development · Technical leadership",
+              "description": "Parallel product tracks needed technical direction and a team able to take applications through the full development cycle.",
+              "contribution": "As CTO, I led architecture and delivery with React, React Native and Node.js, connecting product planning to engineering."
+            }
+          ],
           "summary": "As CTO, I directed technical strategy and architecture across parallel product development tracks. I led the full development cycle of web and mobile applications, working with React, React Native and Node.js. It was also a role in building a team: mentoring engineers and introducing processes that supported sustainable delivery.",
           "impact": "Introduced Scrum practices to improve delivery predictability and team alignment, while keeping architecture and engineering quality central to product development.",
           "details": [
@@ -74,17 +101,26 @@
       "formerly": "ANTIGA",
       "location": "PORTO ALEGRE, BRASIL",
       "eyebrow": "SENIOR SOFTWARE ENGINEER · TECH LEAD & ARCHITECT",
-      "headline": "Construo software em que as pessoas podem confiar.",
+      "headline": "Construo produtos em que as pessoas podem confiar.",
       "intro": "Há mais de 15 anos construo aplicações web, conectando os detalhes de uma boa experiência aos sistemas que a sustentam. Hoje, lidero engenheiros, desenho arquiteturas e continuo próximo do código.",
       "explore": "Percorrer minha trajetória",
       "portrait": "Allan Winckler em Nova York, com a Estátua da Liberdade ao fundo",
-      "photoCaption": "SOFTWARE · SISTEMAS · PESSOAS",
+      "photoCaption": "ENGENHARIA · PRODUTO · PESSOAS",
       "impact": "O QUE AJUDEI A TRANSFORMAR",
       "contribution": "Ver minha contribuição",
       "closeContribution": "Fechar detalhes",
       "education": "PELO CAMINHO",
       "stories": {
         "access": {
+          "products": [
+            {
+              "id": "menu-updates",
+              "name": "Atualização de cardápios",
+              "context": "Hospitalidade · Integrações com POS",
+              "description": "Manter cardápios sincronizados entre serviços faz parte de uma experiência de pedido confiável.",
+              "contribution": "Desenhei atualizações assíncronas com Amazon SQS, substituindo consultas repetidas por eventos e definindo a recuperação dos serviços em caso de falha."
+            }
+          ],
           "summary": "Lidero uma equipe de quatro pessoas entre frontend e backend, trabalhando nos serviços que conectam fidelidade, CRM, cardápios e pontos de venda. Meu papel une decisões de arquitetura e implementação: decompor funcionalidades complexas, revisar código e ajudar a equipe a construir com consistência.",
           "impact": "Desenhei um sistema assíncrono de atualização de cardápios com Amazon SQS, substituindo consultas periódicas por eventos para reduzir o acoplamento e melhorar a propagação confiável dos dados entre serviços de POS.",
           "details": [
@@ -94,6 +130,15 @@
           ]
         },
         "gavea": {
+          "products": [
+            {
+              "id": "frontend-platform",
+              "name": "Uma experiência web mais rápida e consistente",
+              "context": "Aplicações web · Design system",
+              "description": "O produto precisava de uma base de interface compartilhada que pudesse evoluir sem repetir o trabalho legado a cada tela.",
+              "contribution": "Construí componentes React reutilizáveis, documentados no Storybook, e elevei a performance no Lighthouse de 58 para 94."
+            }
+          ],
           "summary": "Trabalhei nas bases de um frontend mais rápido e fácil de manter. Além de construir aplicações React com TypeScript, migrei interfaces legadas para um design system documentado no Storybook. Componentes compartilhados e padrões mais claros trouxeram consistência ao produto e ao trabalho de quem o desenvolvia.",
           "impact": "Elevei a pontuação de performance no Lighthouse de 58 para 94 com divisão de código, carregamento sob demanda e otimização de assets.",
           "details": [
@@ -103,6 +148,15 @@
           ]
         },
         "leadup": {
+          "products": [
+            {
+              "id": "web-mobile",
+              "name": "Produtos web e mobile",
+              "context": "Desenvolvimento de produto · Liderança técnica",
+              "description": "Frentes de produto em paralelo precisavam de direção técnica e de uma equipe capaz de conduzir o ciclo completo das aplicações.",
+              "contribution": "Como CTO, liderei arquitetura e entrega com React, React Native e Node.js, conectando o planejamento de produto à engenharia."
+            }
+          ],
           "summary": "Como CTO, conduzi a estratégia técnica e a arquitetura de frentes de produto em paralelo. Liderei o ciclo completo de desenvolvimento de aplicações web e mobile com React, React Native e Node.js. Também foi um trabalho de formação de equipe: mentoria e processos que ajudassem a sustentar as entregas.",
           "impact": "Introduzi práticas de Scrum para melhorar a previsibilidade das entregas e o alinhamento da equipe, mantendo arquitetura e qualidade de engenharia presentes nas decisões de produto.",
           "details": [

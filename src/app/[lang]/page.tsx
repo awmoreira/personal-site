@@ -160,11 +160,21 @@ export default async function Home({
           <div className="connector" aria-hidden="true">
             <svg viewBox="0 0 1000 170" preserveAspectRatio="none">
               <path
-                className="desktop-curve"
+                className="desktop-curve curve-base"
                 d="M 500 0 C 500 116 160 42 160 170"
               />
               <path
-                className="mobile-curve"
+                className="mobile-curve curve-base"
+                d="M 500 0 C 500 116 40 42 40 170"
+              />
+              <path
+                className="desktop-curve curve-progress"
+                pathLength="1"
+                d="M 500 0 C 500 116 160 42 160 170"
+              />
+              <path
+                className="mobile-curve curve-progress"
+                pathLength="1"
                 d="M 500 0 C 500 116 40 42 40 170"
               />
             </svg>
@@ -185,17 +195,18 @@ export default async function Home({
                     data-chapter
                     key={fact.id}
                   >
-                    <a
-                      href={`#${fact.id}`}
-                      className="year"
-                    >
+                    <a href={`#${fact.id}`} className="year" data-reveal="date">
                       <span>{i === 0 ? t.now : fact.year}</span>{" "}
                       <span className="year-caption">
                         {i === 0 ? "2024" : `0${i + 1}`}
                       </span>
                     </a>
-                    <span className="node" aria-hidden="true" />
-                    <div className="chapter-content">
+                    <span
+                      className="node"
+                      data-reveal="node"
+                      aria-hidden="true"
+                    />
+                    <div className="chapter-content" data-reveal="chapter">
                       <p className="micro period">{fact.dates[lang]}</p>
                       <div className="company-row">
                         <span
@@ -223,7 +234,60 @@ export default async function Home({
                           : fact.role}
                       </h3>
                       <p className="summary">{story.summary}</p>
-                      <div className="impact">
+                      {story.products && (
+                        <div className="product-work">
+                          <p className="micro accent">
+                            {lang === "pt"
+                              ? "O PRODUTO E MINHA CONTRIBUIÇÃO"
+                              : "THE PRODUCT AND MY CONTRIBUTION"}
+                          </p>
+                          <ul className="product-list">
+                            {story.products.map((product, index) => (
+                              <li
+                                className="product-row"
+                                id={product.id}
+                                key={product.id}
+                                data-reveal="product"
+                              >
+                                <span
+                                  className="product-mark micro"
+                                  aria-hidden="true"
+                                >
+                                  0{index + 1}↗
+                                </span>
+                                <div>
+                                  <p className="micro product-context">
+                                    {product.context}
+                                  </p>
+                                  <h4>{product.name}</h4>
+                                  <p>{product.description}</p>
+                                  <p className="product-contribution">
+                                    {product.contribution}
+                                  </p>
+                                  {product.href && (
+                                    <a
+                                      className="micro product-link"
+                                      href={product.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      {lang === "pt"
+                                        ? "Abrir produto"
+                                        : "Explore product"}{" "}
+                                      ↗
+                                    </a>
+                                  )}
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      <div
+                        className={
+                          story.products ? "impact product-impact" : "impact"
+                        }
+                      >
                         <p className="micro accent">{t.impact}</p>
                         <p>{story.impact}</p>
                         {fact.id === "gavea" && (
@@ -284,7 +348,7 @@ export default async function Home({
                 );
               })}
             </ol>
-            <div className="journey-ending">
+            <div className="journey-ending" data-reveal="chapter">
               <span className="end-node" aria-hidden="true" />
               <h2>{t.closingTitle}</h2>
               <p>{t.closing}</p>

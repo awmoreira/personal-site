@@ -1134,3 +1134,100 @@ html {
     gap: 14px;
   }
 }
+
+/* The route draws with the scroll; each milestone enters once, in reading order. */
+.connector .curve-base {
+  stroke: var(--line, #dddde3);
+}
+.connector .curve-progress {
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--curve-progress, 1));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ready [data-reveal]:not([data-revealed]) {
+    opacity: 0;
+  }
+  .motion-ready [data-reveal]:focus-within {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .connector .curve-progress {
+    stroke-dashoffset: 0;
+  }
+}
+
+.product-work {
+  margin-top: 38px;
+}
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+.product-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 22px;
+  border-top: 1px solid #dddde3;
+  padding: 28px 0 4px;
+  scroll-margin-top: 120px;
+}
+.product-mark {
+  color: var(--blue);
+  border: 1px solid #dddde3;
+  border-radius: 12px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+}
+.product-context {
+  color: var(--faint);
+  margin: 0 0 8px;
+}
+.product-row h4 {
+  font-size: 23px;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+  margin: 0 0 13px;
+  font-weight: 600;
+}
+.product-row p:not(.micro) {
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+.product-row p.product-contribution {
+  color: var(--ink);
+  font-size: 15px;
+}
+.product-link {
+  display: inline-block;
+  color: var(--blue);
+  margin: 8px 0;
+}
+.product-impact > .micro,
+.product-impact > p:not(.micro) {
+  display: none;
+}
+.product-impact:has(.performance) {
+  margin-top: 20px;
+}
+.product-impact:not(:has(.performance)) {
+  display: none;
+}
+@media (max-width: 700px) {
+  .product-row {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .product-mark {
+    height: 32px;
+    border-radius: 8px;
+    font-size: 9px;
+  }
+  .product-row h4 {
+    font-size: 21px;
+  }
+}

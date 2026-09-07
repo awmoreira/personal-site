@@ -28,9 +28,76 @@ export default function Enhancements({
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     let frame = 0;
     let alive = true;
+    const reveals = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-reveal]"),
+    );
+    const animations = new Set<Animation>();
+    const reveal = (element: HTMLElement) => {
+      if (element.dataset.revealed) return;
+      element.dataset.revealed = "true";
+      if (media.matches) return;
+      const kind = element.dataset.reveal;
+      const from =
+        kind === "date"
+          ? "translateX(-10px)"
+          : kind === "node"
+            ? "scale(.4)"
+            : "translateY(28px)";
+      const animation = element.animate(
+        [
+          { opacity: 0, transform: from },
+          { opacity: 1, transform: "none" },
+        ],
+        {
+          duration: kind === "node" ? 420 : 680,
+          delay: kind === "date" ? 0 : 70,
+          easing: "cubic-bezier(.22,1,.36,1)",
+        },
+      );
+      animations.add(animation);
+      animation.finished
+        .then(() => animations.delete(animation))
+        .catch(() => {});
+    };
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            reveal(entry.target as HTMLElement);
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -6% 0px", threshold: 0 },
+    );
+    reveals.forEach((element) => revealObserver.observe(element));
+    const stopMotion = () => {
+      if (media.matches) {
+        animations.forEach((animation) => animation.cancel());
+        reveals.forEach((element) => {
+          element.dataset.revealed = "true";
+        });
+      }
+    };
+    media.addEventListener("change", stopMotion);
+    const connector = document.querySelector<HTMLElement>(".connector");
     const update = () => {
       frame = 0;
       const rect = timeline.getBoundingClientRect();
+      if (connector) {
+        const curve = connector.getBoundingClientRect();
+        connector.style.setProperty(
+          "--curve-progress",
+          media.matches
+            ? "1"
+            : String(
+                Math.max(
+                  0,
+                  Math.min(1, (innerHeight * 0.48 - curve.top) / curve.height),
+                ),
+              ),
+        );
+      }
       const progress = Math.max(
         0,
         Math.min(1, (window.innerHeight * 0.48 - rect.top) / rect.height),
@@ -61,6 +128,7 @@ export default function Enhancements({
     window.addEventListener("resize", schedule);
     media.addEventListener("change", schedule);
     document.documentElement.classList.add("enhanced");
+    document.documentElement.classList.add("motion-ready");
     let saved: Position | null = null;
     try {
       const raw = sessionStorage.getItem("journey-position");
@@ -149,6 +217,10 @@ export default function Enhancements({
       alive = false;
       cancelAnimationFrame(frame);
       observer.disconnect();
+      revealObserver.disconnect();
+      animations.forEach((animation) => animation.cancel());
+      media.removeEventListener("change", stopMotion);
+      document.documentElement.classList.remove("motion-ready");
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
       media.removeEventListener("change", schedule);
