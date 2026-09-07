@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Locale links deliberately perform document navigation to restore the localized root, expanded details and reading offset together. */
+import DeliveryVisual from "@/components/DeliveryVisual";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -234,84 +235,17 @@ export default async function Home({
                           : fact.role}
                       </h3>
                       <p className="summary">{story.summary}</p>
-                      {story.products && (
-                        <div className="product-work">
-                          <p className="micro accent">
-                            {lang === "pt"
-                              ? "O PRODUTO E MINHA CONTRIBUIÇÃO"
-                              : "THE PRODUCT AND MY CONTRIBUTION"}
-                          </p>
-                          <ul className="product-list">
-                            {story.products.map((product, index) => (
-                              <li
-                                className="product-row"
-                                id={product.id}
-                                key={product.id}
-                                data-reveal="product"
-                              >
-                                <span
-                                  className="product-mark micro"
-                                  aria-hidden="true"
-                                >
-                                  0{index + 1}↗
-                                </span>
-                                <div>
-                                  <p className="micro product-context">
-                                    {product.context}
-                                  </p>
-                                  <h4>{product.name}</h4>
-                                  <p>{product.description}</p>
-                                  <p className="product-contribution">
-                                    {product.contribution}
-                                  </p>
-                                  {product.href && (
-                                    <a
-                                      className="micro product-link"
-                                      href={product.href}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    >
-                                      {lang === "pt"
-                                        ? "Abrir produto"
-                                        : "Explore product"}{" "}
-                                      ↗
-                                    </a>
-                                  )}
-                                </div>
-                              </li>
-                            ))}
-                          </ul>
+                      <DeliveryVisual
+                        experience={fact.id}
+                        lang={lang}
+                        anchor={story.products?.[0]?.id}
+                      />
+                      {!story.products && (
+                        <div className="impact">
+                          <p className="micro accent">{t.impact}</p>
+                          <p>{story.impact}</p>
                         </div>
                       )}
-                      <div
-                        className={
-                          story.products ? "impact product-impact" : "impact"
-                        }
-                      >
-                        <p className="micro accent">{t.impact}</p>
-                        <p>{story.impact}</p>
-                        {fact.id === "gavea" && (
-                          <div
-                            className="performance"
-                            aria-label={
-                              lang === "pt"
-                                ? "Performance no Lighthouse: de 58 para 94"
-                                : "Lighthouse performance: 58 to 94"
-                            }
-                          >
-                            <span>58</span>
-                            <svg viewBox="0 0 100 18" aria-hidden="true">
-                              <path d="M0 9 H96 M89 2 L96 9 L89 16" />
-                            </svg>
-                            <strong>94</strong>
-                            <span className="micro">
-                              LIGHTHOUSE
-                              <br />
-                              PERFORMANCE
-                            </span>
-                          </div>
-                        )}
-                      </div>
                       {story.details.length > 0 && (
                         <details id={`details-${fact.id}`}>
                           <summary>

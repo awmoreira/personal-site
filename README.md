@@ -57,3 +57,7 @@ The production baseline recorded before the clean timeline redesign was `dpl_ALY
 ## Interaction and accessibility
 
 The scroll remains native. A normalized SVG stroke draws the opening curve; IntersectionObserver and the Web Animations API reveal dates, nodes, milestones and product rows once as they enter the viewport. Reduced-motion preference disables these entrances, and content remains visible without JavaScript. ResizeObserver recalculates the line when disclosures or viewport dimensions change; fonts are awaited before restoring reading position. EN/PT links preserve the active section, its viewport offset and open disclosures in session storage. Reduced-motion preference shows a complete static line. Old `#about`, `#work` and `#contact` links remain valid. There is no tracking or contact form backend.
+
+## Delivery illustrations
+
+`src/components/DeliveryVisual.tsx` presents a distinct conceptual diagram for each experience. Keep EN/PT labels in sync and use only confirmed work. The Gavea case is based on the author’s additional account: a shared library/BFF for state and backend access across mobile and web/Electron, plus a full mobile refactor without AI assistance. Lighthouse is no longer used as a career highlight. Product anchors remain stable even as their presentation evolves.

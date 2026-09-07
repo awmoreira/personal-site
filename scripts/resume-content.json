@@ -41,18 +41,18 @@
           "products": [
             {
               "id": "frontend-platform",
-              "name": "A faster, consistent web experience",
-              "context": "Web applications · Design system",
-              "description": "The product needed a shared interface foundation that could evolve without carrying the same legacy work into every screen.",
-              "contribution": "I built reusable React components documented in Storybook and improved Lighthouse performance from 58 to 94."
+              "name": "One shared foundation. Two applications.",
+              "context": "Shared library / BFF · Mobile + Web / Electron",
+              "description": "Created a shared library/BFF as the source of truth for application state and a consistent way for mobile and web/Electron to consume the backend.",
+              "contribution": "Refactored the mobile application end to end into a more stable, performant and secure version. Both deliveries were built without AI assistance."
             }
           ],
-          "summary": "I worked on the foundations of a faster, more maintainable frontend. Alongside building React applications with TypeScript, I migrated legacy interfaces into a Storybook-driven design system. Shared components and clearer patterns helped bring consistency to both the product and the way engineers worked on it.",
-          "impact": "Improved the Lighthouse performance score from 58 to 94 through code splitting, lazy loading and asset optimization.",
+          "summary": "At Gavea, I worked on the foundation connecting mobile and web/Electron. My central contribution was a shared library/BFF, alongside an end-to-end refactor of the mobile application.",
+          "impact": "Created a shared source of truth for application state and backend consumption across mobile and web/Electron. Refactored the mobile application end to end for greater stability, performance and security, without AI assistance.",
           "details": [
-            "Built a component-driven architecture with reusable, documented interface patterns.",
-            "Improved loading performance by reducing the work and assets needed for the initial experience.",
-            "Integrated backend APIs and strengthened UI conventions to simplify ongoing development."
+            "Created a shared library/BFF to centralize application state and backend access across both applications.",
+            "Refactored the mobile application end to end, addressing stability, performance and security.",
+            "Built reusable React components and a Storybook design system to support interface consistency."
           ]
         },
         "leadup": {
@@ -133,18 +133,18 @@
           "products": [
             {
               "id": "frontend-platform",
-              "name": "Uma experiência web mais rápida e consistente",
-              "context": "Aplicações web · Design system",
-              "description": "O produto precisava de uma base de interface compartilhada que pudesse evoluir sem repetir o trabalho legado a cada tela.",
-              "contribution": "Construí componentes React reutilizáveis, documentados no Storybook, e elevei a performance no Lighthouse de 58 para 94."
+              "name": "Uma base compartilhada. Duas aplicações.",
+              "context": "Biblioteca / BFF · Mobile + Web / Electron",
+              "description": "Criei uma biblioteca/BFF como fonte única de verdade para o estado das aplicações e uma forma consistente de consumir o backend no mobile e no web/Electron.",
+              "contribution": "Refatorei o mobile de ponta a ponta para uma versão mais estável, performática e segura. As duas entregas foram construídas sem assistência de IA."
             }
           ],
-          "summary": "Trabalhei nas bases de um frontend mais rápido e fácil de manter. Além de construir aplicações React com TypeScript, migrei interfaces legadas para um design system documentado no Storybook. Componentes compartilhados e padrões mais claros trouxeram consistência ao produto e ao trabalho de quem o desenvolvia.",
-          "impact": "Elevei a pontuação de performance no Lighthouse de 58 para 94 com divisão de código, carregamento sob demanda e otimização de assets.",
+          "summary": "Na Gavea, trabalhei na base que conectava mobile e web/Electron. Minha principal contribuição foi uma biblioteca/BFF compartilhada, acompanhada de uma refatoração completa da aplicação mobile.",
+          "impact": "Criei uma fonte única de verdade para o estado e o consumo do backend no mobile e no web/Electron. Refatorei o mobile de ponta a ponta para ganhar estabilidade, performance e segurança, sem assistência de IA.",
           "details": [
-            "Construí uma arquitetura de componentes com padrões de interface reutilizáveis e documentados.",
-            "Melhorei o carregamento reduzindo o trabalho e os arquivos necessários na experiência inicial.",
-            "Integrei APIs de backend e fortaleci convenções de interface para simplificar a evolução da plataforma."
+            "Criei uma biblioteca/BFF para centralizar o estado das aplicações e o acesso ao backend nas duas aplicações.",
+            "Refatorei a aplicação mobile de ponta a ponta, trabalhando estabilidade, performance e segurança.",
+            "Construí componentes React reutilizáveis e um design system no Storybook para dar consistência às interfaces."
           ]
         },
         "leadup": {
@@ -216,9 +216,10 @@
       "initials": "G",
       "tags": [
         "React",
-        "TypeScript",
-        "Storybook",
-        "Performance"
+        "React Native",
+        "Electron",
+        "BFF",
+        "Shared state"
       ]
     },
     {
