@@ -210,12 +210,8 @@ export default async function Home({
                     <div className="chapter-content" data-reveal="chapter">
                       <p className="micro period">{fact.dates[lang]}</p>
                       <div className="company-row">
-                        <span
-                          className={`company-symbol symbol-${fact.id}`}
-                          aria-hidden="true"
-                        >
-                          {fact.initials}
-                          <span>.</span>
+                        <span className={`company-logo logo-${fact.id}`}>
+                          <Image src={`/company-logos/${fact.id}.${fact.id === "access" ? "svg" : "jpg"}`} alt="" width={fact.id === "access" ? 176 : 64} height={fact.id === "access" ? 49 : 64} />
                         </span>
                         <div>
                           <h2>{fact.company}</h2>
