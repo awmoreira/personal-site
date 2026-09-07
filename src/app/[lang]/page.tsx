@@ -58,7 +58,7 @@ export default async function Home({
       <a className="skip" href="#about">
         {t.skip}
       </a>
-      <header className="header" id="top" data-anchor>
+      <header className="header" id="top">
         <a href="#top" className="wordmark" aria-label="aw. Allan Winckler">
           <span className="monogram">
             aw<span>.</span>
