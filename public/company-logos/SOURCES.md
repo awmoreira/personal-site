@@ -10,3 +10,5 @@ Original brand assets, downloaded 2026-09-07. Used to identify employers in Alla
 Original brand colors are preserved; PNG and JPEG assets are embedded as images. Adjacent headings provide accessible company names, so logo alt text is empty to avoid duplicate announcements.
 
 - QikServe: original blue logo from https://resources.qikserve.com/en/order-and-pay — https://resources.qikserve.com/hubfs/Blue%20Logo%20High%20Res-1.png . Resized for web delivery without recoloring.
+
+QikServe timeline: the standalone Q symbol is displayed from the original Adyen partner SVG (https://media.ffycdn.net/eu/adyen/KpgPYynw5gZCCr7NGQuP.svg), using a CSS mask viewport that excludes the wordmark. Original geometry is preserved. Blue #0c00b1 is sampled from the official Blue Logo High Res PNG listed above. The adjacent heading supplies the name once.

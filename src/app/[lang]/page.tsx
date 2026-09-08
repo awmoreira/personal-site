@@ -215,7 +215,7 @@ export default async function Home({
                       <p className="micro period">{fact.dates[lang]}</p>
                       <div className="company-row">
                         <span className={`company-logo logo-${fact.id}`}>
-                          <Image
+                          {fact.id === "qikserve" ? <span className="qikserve-symbol" aria-hidden="true" /> : <Image
                             src={`/company-logos/${fact.id}.${["access", "qikserve"].includes(fact.id) ? "png" : "jpg"}`}
                             alt=""
                             width={
@@ -226,7 +226,7 @@ export default async function Home({
                             height={
                               ["access", "qikserve"].includes(fact.id) ? 49 : 64
                             }
-                          />
+                          />}
                         </span>
                         <div>
                           <h2>{fact.company}</h2>
