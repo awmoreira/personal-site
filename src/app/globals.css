@@ -1552,8 +1552,6 @@ html {
   width: 112px;
   height: 56px;
   padding: 10px;
-  background: #202124;
-  border-color: #202124;
 }
 .company-logo.logo-cefet {
   padding: 5px;
@@ -1634,4 +1632,3 @@ html {
   }
 }
 
-.company-logo.logo-qikserve { background: #202124; border-color: #202124; }

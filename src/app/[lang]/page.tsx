@@ -214,7 +214,7 @@ export default async function Home({
                       <div className="company-row">
                         <span className={`company-logo logo-${fact.id}`}>
                           <Image
-                            src={`/company-logos/${fact.id}.${["access", "qikserve"].includes(fact.id) ? "svg" : "jpg"}`}
+                            src={`/company-logos/${fact.id}.${["access", "qikserve"].includes(fact.id) ? "png" : "jpg"}`}
                             alt=""
                             width={
                               ["access", "qikserve"].includes(fact.id)
