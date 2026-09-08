@@ -23,18 +23,35 @@
           "products": [
             {
               "id": "menu-updates",
-              "name": "Menu updates",
-              "context": "Hospitality · POS integrations",
-              "description": "Keeping menus in sync across connected services is part of a reliable ordering experience.",
-              "contribution": "I designed asynchronous updates with Amazon SQS, replacing repeated polling with events and defining how services recover from failures."
+              "name": "Connected ordering",
+              "context": "Online Ordering · Kiosk Ordering",
+              "description": "Continuing the same products after the acquisition.",
+              "contribution": "Consolidation, shared architectures, integrations and AI-assisted full-stack delivery."
             }
           ],
-          "summary": "I lead a team of four across frontend and backend, working on the services that connect loyalty, CRM, menus and point-of-sale systems. My role brings together architectural decisions and hands-on delivery: breaking down complex features, reviewing code and helping the team build with consistency.",
-          "impact": "Designed a push-based, asynchronous menu update system with Amazon SQS, replacing polling to reduce coupling and improve reliable data propagation between POS services.",
+          "summary": "After the acquisition, I continued leading the same full-stack squad and working on Online Ordering and Kiosk Ordering. The scope evolved toward the group’s priorities: consolidating solutions, unifying architectures and connecting its products.",
+          "impact": "Designed push-based menu integration using an Access menu manager, Amazon SQS and our POS integrations. This unifies the solution and makes it easier for customers to connect their POS to our ordering products.",
           "details": [
-            "Define service contracts, retry strategies and idempotency so integrations can handle failures more reliably.",
-            "Guide React and TypeScript architecture while contributing to critical Java and Spring Boot services.",
-            "Mentor engineers and improve testing, component structure and CI workflows across the team."
+            "Lead a full-stack squad of four, connecting frontend and backend delivery across the same ordering products.",
+            "Define service contracts, retries and idempotency for push-based menu integration.",
+            "Apply AI end to end in the development process with Devin AI, evolving our tools and approaches alongside their platform."
+          ]
+        },
+        "qikserve": {
+          "products": [
+            {
+              "id": "ordering-products",
+              "name": "Online Ordering & Kiosk Ordering",
+              "context": "Hospitality · Full stack",
+              "description": "Two ordering channels, supported by the same squad.",
+              "contribution": "Full-stack development and technical leadership across both products."
+            }
+          ],
+          "summary": "Joined QikServe to work on Online Ordering and Kiosk Ordering, combining full-stack development with squad leadership. My work connected the customer-facing experiences to the backend services supporting both products.",
+          "impact": "Led technical delivery across online and self-service ordering. After QikServe joined The Access Group in September 2024, I continued with the same products and squad under the group’s consolidation strategy.",
+          "details": [
+            "Worked across frontend and backend on Online Ordering and Kiosk Ordering.",
+            "Combined implementation, architectural decisions, code review and support for the squad."
           ]
         },
         "gavea": {
@@ -115,18 +132,35 @@
           "products": [
             {
               "id": "menu-updates",
-              "name": "Atualização de cardápios",
-              "context": "Hospitalidade · Integrações com POS",
-              "description": "Manter cardápios sincronizados entre serviços faz parte de uma experiência de pedido confiável.",
-              "contribution": "Desenhei atualizações assíncronas com Amazon SQS, substituindo consultas repetidas por eventos e definindo a recuperação dos serviços em caso de falha."
+              "name": "Ordering conectado",
+              "context": "Online Ordering · Kiosk Ordering",
+              "description": "Continuidade dos mesmos produtos após a aquisição.",
+              "contribution": "Consolidação, arquiteturas unificadas, integrações e desenvolvimento full stack com IA."
             }
           ],
-          "summary": "Lidero uma equipe de quatro pessoas entre frontend e backend, trabalhando nos serviços que conectam fidelidade, CRM, cardápios e pontos de venda. Meu papel une decisões de arquitetura e implementação: decompor funcionalidades complexas, revisar código e ajudar a equipe a construir com consistência.",
-          "impact": "Desenhei um sistema assíncrono de atualização de cardápios com Amazon SQS, substituindo consultas periódicas por eventos para reduzir o acoplamento e melhorar a propagação confiável dos dados entre serviços de POS.",
+          "summary": "Após a aquisição, continuei liderando a mesma squad full stack e trabalhando em Online Ordering e Kiosk Ordering. O escopo evoluiu para as prioridades do grupo: consolidar soluções, unificar arquiteturas e integrar seus produtos.",
+          "impact": "Desenhei a integração push-based de cardápios usando um gerenciador de menus da Access, Amazon SQS e nossas integrações com POS. A iniciativa unifica a solução e facilita a conexão do POS do cliente aos nossos produtos de ordering.",
           "details": [
-            "Defino contratos entre serviços, estratégias de retry e idempotência para tornar as integrações mais resilientes a falhas.",
-            "Oriento a arquitetura React e TypeScript e contribuo em serviços críticos com Java e Spring Boot.",
-            "Apoio o desenvolvimento dos engenheiros e a evolução de testes, componentes e fluxos de CI."
+            "Lidero uma squad full stack de quatro pessoas, conectando entregas frontend e backend nos mesmos produtos de ordering.",
+            "Defino contratos entre serviços, retries e idempotência para a integração push-based de cardápios.",
+            "Aplico IA de ponta a ponta no processo de desenvolvimento com Devin AI, evoluindo ferramentas e abordagens junto à plataforma."
+          ]
+        },
+        "qikserve": {
+          "products": [
+            {
+              "id": "ordering-products",
+              "name": "Online Ordering & Kiosk Ordering",
+              "context": "Hospitalidade · Full stack",
+              "description": "Dois canais de pedidos, sustentados pela mesma squad.",
+              "contribution": "Desenvolvimento full stack e liderança técnica nos dois produtos."
+            }
+          ],
+          "summary": "Entrei na QikServe para trabalhar em Online Ordering e Kiosk Ordering, unindo desenvolvimento full stack e liderança de squad. Minha atuação conectava a experiência do cliente aos serviços de backend que sustentavam os dois produtos.",
+          "impact": "Conduzi entregas técnicas nos canais de pedidos online e de autoatendimento. Após a aquisição pela The Access Group, em setembro de 2024, continuei com os mesmos produtos e a mesma squad, dentro da estratégia de consolidação do grupo.",
+          "details": [
+            "Atuei no frontend e no backend de Online Ordering e Kiosk Ordering.",
+            "Combinei implementação, decisões de arquitetura, revisão de código e apoio à squad."
           ]
         },
         "gavea": {
@@ -190,11 +224,10 @@
       "id": "access",
       "year": "2024",
       "dates": {
-        "en": "FEB 2024 — PRESENT",
-        "pt": "FEV 2024 — AGORA"
+        "en": "SEP 2024 — PRESENT · AFTER THE ACQUISITION",
+        "pt": "SET 2024 — AGORA · APÓS A AQUISIÇÃO"
       },
-      "company": "Access Group",
-      "previous": "QikServe",
+      "company": "The Access Group",
       "role": "Senior Software Engineer · Tech Lead & Architect",
       "initials": "A",
       "tags": [
@@ -202,6 +235,23 @@
         "TypeScript",
         "Java / Spring Boot",
         "Amazon SQS"
+      ]
+    },
+    {
+      "id": "qikserve",
+      "year": "2024",
+      "dates": {
+        "en": "FEB — SEP 2024 · BEFORE THE ACQUISITION",
+        "pt": "FEV — SET 2024 · ANTES DA AQUISIÇÃO"
+      },
+      "company": "QikServe",
+      "role": "Senior Software Engineer · Tech Lead & Architect",
+      "initials": "Q",
+      "tags": [
+        "Online Ordering",
+        "Kiosk Ordering",
+        "Full stack",
+        "Squad leadership"
       ]
     },
     {

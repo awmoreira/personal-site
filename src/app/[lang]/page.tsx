@@ -136,9 +136,11 @@ export default async function Home({
             </figure>
             <div className="current">
               <p className="micro accent">{t.now}</p>
-              <p className="current-company">Access Group</p>
+              <p className="current-company">The Access Group</p>
               <p className="micro">
-                {t.formerly} QIKSERVE
+                {lang === "pt"
+                  ? "ONLINE ORDERING · KIOSK"
+                  : "ONLINE ORDERING · KIOSK"}
                 <br />
                 {lang === "en"
                   ? "ENGINEERING & LEADERSHIP"
@@ -211,15 +213,21 @@ export default async function Home({
                       <p className="micro period">{fact.dates[lang]}</p>
                       <div className="company-row">
                         <span className={`company-logo logo-${fact.id}`}>
-                          <Image src={`/company-logos/${fact.id}.${fact.id === "access" ? "svg" : "jpg"}`} alt="" width={fact.id === "access" ? 176 : 64} height={fact.id === "access" ? 49 : 64} />
+                          <Image
+                            src={`/company-logos/${fact.id}.${["access", "qikserve"].includes(fact.id) ? "svg" : "jpg"}`}
+                            alt=""
+                            width={
+                              ["access", "qikserve"].includes(fact.id)
+                                ? 176
+                                : 64
+                            }
+                            height={
+                              ["access", "qikserve"].includes(fact.id) ? 49 : 64
+                            }
+                          />
                         </span>
                         <div>
                           <h2>{fact.company}</h2>
-                          {"previous" in fact && (
-                            <span className="former micro">
-                              {t.formerly} {fact.previous}
-                            </span>
-                          )}
                         </div>
                         {i === 0 && (
                           <span className="present micro">{t.now}</span>

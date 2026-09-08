@@ -1,6 +1,6 @@
 import type { Locale } from "@/lib/content";
 
-type Experience = "access" | "gavea" | "leadup" | "cefet";
+type Experience = "access" | "qikserve" | "gavea" | "leadup" | "cefet";
 export default function DeliveryVisual({
   experience,
   lang,
@@ -13,8 +13,11 @@ export default function DeliveryVisual({
   const pt = lang === "pt";
   const titles = {
     access: pt
-      ? "Do cardápio ao ponto de venda."
-      : "From the menu to the point of sale.",
+      ? "Um menu. Produtos conectados."
+      : "One menu. Connected products.",
+    qikserve: pt
+      ? "Dois canais. A mesma experiência de pedido."
+      : "Two channels. One ordering experience.",
     gavea: pt
       ? "Duas experiências. A mesma fonte de verdade."
       : "Two experiences. One source of truth.",
@@ -105,8 +108,10 @@ export default function DeliveryVisual({
               <span className="menu-symbol" aria-hidden="true">
                 ☷
               </span>
-              <strong>{pt ? "Cardápio" : "Menu"}</strong>
-              <small>{pt ? "Uma alteração" : "An update"}</small>
+              <strong>{pt ? "Menu Access" : "Access menu"}</strong>
+              <small>
+                {pt ? "Gerenciador do grupo" : "Group menu manager"}
+              </small>
             </div>
             <span className="flow-connection" aria-hidden="true">
               →
@@ -129,15 +134,18 @@ export default function DeliveryVisual({
               <span className="pos-symbol" aria-hidden="true">
                 ⌘
               </span>
-              <strong>POS</strong>
-              <small>{pt ? "Serviços conectados" : "Connected services"}</small>
+              <strong>{pt ? "Integrações POS" : "POS integrations"}</strong>
+              <small>{pt ? "Conexão do cliente" : "Customer connection"}</small>
             </div>
           </div>
+          <p className="ordering-destination">
+            Online Ordering <span aria-hidden="true">·</span> Kiosk Ordering
+          </p>
           <div className="delivery-result">
             <strong>
               {pt
-                ? "De consultas repetidas a atualizações por evento"
-                : "From repeated polling to event-driven updates"}
+                ? "Conectar o POS do cliente com menos esforço"
+                : "Make the customer’s POS easier to connect"}
             </strong>
             <span>
               {pt
@@ -145,6 +153,59 @@ export default function DeliveryVisual({
                 : "Service contracts · Retries · Idempotency"}
             </span>
           </div>
+          <div className="ai-delivery">
+            <span className="micro">
+              {pt ? "COMO A SQUAD ENTREGA" : "HOW THE SQUAD DELIVERS"}
+            </span>
+            <strong>Full stack + Devin AI</strong>
+            <p>
+              {pt
+                ? "IA de ponta a ponta no desenvolvimento, evoluindo ferramentas e abordagens junto à plataforma."
+                : "AI throughout development, evolving our tools and approaches alongside the platform."}
+            </p>
+          </div>
+        </>
+      )}
+      {experience === "qikserve" && (
+        <>
+          <div className="product-platforms ordering-platforms">
+            <div>
+              <span className="device device-desktop" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <strong>Online Ordering</strong>
+              <small>{pt ? "Pedidos online" : "Online orders"}</small>
+            </div>
+            <div>
+              <span className="device device-kiosk" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <strong>Kiosk Ordering</strong>
+              <small>{pt ? "Autoatendimento" : "Self-service orders"}</small>
+            </div>
+          </div>
+          <div className="delivery-result">
+            <strong>
+              {pt
+                ? "Squad full stack, dos canais ao backend"
+                : "A full-stack squad, from channels to backend"}
+            </strong>
+            <span>
+              {pt
+                ? "Desenvolvimento · Arquitetura · Liderança técnica"
+                : "Development · Architecture · Technical leadership"}
+            </span>
+          </div>
+          <a className="continuity-link" href="#access">
+            {pt
+              ? "Mesmos produtos, novo capítulo na The Access Group"
+              : "Same products, a new chapter at The Access Group"}{" "}
+            ↑
+          </a>
         </>
       )}
       {experience === "leadup" && (

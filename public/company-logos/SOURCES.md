@@ -8,3 +8,5 @@ Original brand assets, downloaded 2026-09-07. Used to identify employers in Alla
 - CEFET-RJ: https://www.cefet-rj.br/ — `/arquivos_download/logo_cefet__home_site.jpg`.
 
 Raster originals are JPEG; SVG is embedded as an image. Adjacent headings provide accessible company names, so logo alt text is empty to avoid duplicate announcements.
+
+- QikServe: https://www.adyen.com/partners/qikserve — partner-provided QikServe SVG logo, https://media.ffycdn.net/eu/adyen/KpgPYynw5gZCCr7NGQuP.svg .

@@ -61,3 +61,5 @@ The scroll remains native. A normalized SVG stroke draws the opening curve; Inte
 ## Delivery illustrations
 
 `src/components/DeliveryVisual.tsx` presents a distinct conceptual diagram for each experience. Keep EN/PT labels in sync and use only confirmed work. The Gavea case is based on the author’s additional account: a shared library/BFF for state and backend access across mobile and web/Electron, plus a full mobile refactor without AI assistance. Lighthouse is no longer used as a career highlight. Product anchors remain stable even as their presentation evolves.
+
+The QikServe / The Access Group split uses September 2024 as the corporate acquisition milestone, rather than a change of products or squad. Both phases cover Online Ordering and Kiosk Ordering. The author places menu-manager/POS consolidation and end-to-end Devin AI workflows in the Access phase. Acquisition source: https://resources.qikserve.com/news/the-access-group-announces-the-acquisition-of-hospitality-digital-order-and-pay-specialist-qikserve .

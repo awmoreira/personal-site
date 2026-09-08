@@ -1532,11 +1532,106 @@ html {
   }
 }
 
-.company-logo { width: 64px; height: 64px; flex: 0 0 auto; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #fff; border: 1px solid var(--rule); }
-.company-logo img { width: 100%; height: 100%; object-fit: contain; }
-.company-logo.logo-access { width: 112px; height: 56px; padding: 10px; background: #202124; border-color: #202124; }
-.company-logo.logo-cefet { padding: 5px; }
-@media(max-width:700px) {
- .company-logo { width: 52px; height: 52px; border-radius: 8px; }
- .company-logo.logo-access { width: 88px; height: 48px; padding: 8px; }
+.company-logo {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--rule);
 }
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.company-logo.logo-access {
+  width: 112px;
+  height: 56px;
+  padding: 10px;
+  background: #202124;
+  border-color: #202124;
+}
+.company-logo.logo-cefet {
+  padding: 5px;
+}
+@media (max-width: 700px) {
+  .company-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+  }
+  .company-logo.logo-access {
+    width: 88px;
+    height: 48px;
+    padding: 8px;
+  }
+}
+
+.company-logo.logo-qikserve {
+  width: 112px;
+  height: 56px;
+  padding: 5px;
+}
+.device-kiosk {
+  width: 36px;
+  height: 56px;
+  border-radius: 5px;
+  border-bottom-width: 7px;
+}
+.ordering-platforms {
+  min-height: 110px;
+}
+.ordering-platforms .device-desktop {
+  margin-top: 15px;
+}
+.ordering-destination {
+  text-align: center;
+  color: var(--blue);
+  font-size: 13px;
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px dashed var(--rule);
+}
+.ai-delivery {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+.ai-delivery .micro {
+  color: var(--blue);
+  font-size: 9px;
+}
+.ai-delivery strong {
+  font-size: 16px;
+  font-weight: 500;
+}
+.ai-delivery p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+.continuity-link {
+  display: inline-block;
+  color: var(--blue);
+  font-size: 12px;
+  margin-top: 20px;
+  line-height: 1.7;
+}
+@media (max-width: 700px) {
+  .company-logo.logo-qikserve {
+    width: 88px;
+    height: 48px;
+  }
+  .ordering-platforms strong {
+    font-size: 12px;
+  }
+}
+
+.company-logo.logo-qikserve { background: #202124; border-color: #202124; }

@@ -44,13 +44,14 @@ try {
       "trajectory",
       "work",
       "access",
+      "qikserve",
       "gavea",
       "leadup",
       "cefet",
       "contact",
     ])
       assert(html.includes(`id="${id}"`), `Missing ${id}`);
-    assert.equal((html.match(/<details\b/g) || []).length, 3);
+    assert.equal((html.match(/<details\b/g) || []).length, 4);
     assert(html.includes("mailto:awmoreira@gmail.com"));
     assert(html.includes(`https://personal-site-six-sandy.vercel.app/${lang}`));
     assert(html.includes("application/ld+json"));
@@ -65,6 +66,7 @@ try {
     assert(visible.includes("BFF") && visible.includes("Electron"));
     for (const id of [
       "delivery-access",
+      "delivery-qikserve",
       "delivery-gavea",
       "delivery-leadup",
       "delivery-cefet",

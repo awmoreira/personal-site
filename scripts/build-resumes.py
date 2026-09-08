@@ -40,13 +40,12 @@ for lang, t in data['content'].items():
     elements += [para('PROFILE' if en else 'PERFIL', 'LabelCustom'), para(t['intro']), para('15+ years in web development and 7+ years in mobile. Technical leadership across frontend architecture, distributed backend systems and engineering quality.' if en else 'Mais de 15 anos em desenvolvimento web e mais de 7 anos em mobile. Liderança técnica em arquitetura frontend, sistemas backend distribuídos e qualidade de engenharia.')]
     elements.append(para('EXPERIENCE' if en else 'EXPERIÊNCIA', 'LabelCustom'))
     for index, fact in enumerate(data['facts']):
-        if index == 2:
+        if fact['id'] == 'leadup':
             elements += [PageBreak(), para('EXPERIENCE / CONTINUED' if en else 'EXPERIÊNCIA / CONTINUAÇÃO', 'LabelCustom')]
         story = t['stories'][fact['id']]
-        heading = fact['company'] + (' (formerly QikServe)' if en else ' (antiga QikServe)') if index == 0 else fact['company']
+        heading = fact['company']
         elements += [KeepTogether([para(heading, 'RoleCustom'), para(fact['role'] + ' | ' + fact['dates'][lang], 'SmallCustom')]), para(story['summary']), para(story['impact'])]
-        if index == 0:
-            elements.append(para(story['details'][0]))
+
         elements.append(Spacer(1, 7))
     elements += [para('TECHNICAL SKILLS' if en else 'COMPETÊNCIAS TÉCNICAS', 'LabelCustom'), para('TypeScript, JavaScript, Java | React, React Native, Next.js, Storybook | Node.js, Spring Boot, GraphQL, REST, Amazon SQS | Microservices, idempotency, resilience patterns, design systems | Jest, Vitest, Playwright, Cypress, CI/CD, Docker')]
     elements += [para('AI-AUGMENTED ENGINEERING' if en else 'ENGENHARIA COM APOIO DE IA', 'LabelCustom'), para('Reduced test writing time by approximately 60% with AI-assisted generation using Copilot and Devin AI across multiple projects. Apply AI workflows to system design, refactoring, documentation and code review, and mentor teams on their integration into engineering practices.' if en else 'Reduzi em aproximadamente 60% o tempo de escrita de testes com geração assistida por Copilot e Devin AI em diferentes projetos. Aplico fluxos com IA em desenho de sistemas, refatoração, documentação e revisão de código, e oriento equipes na integração dessas ferramentas à engenharia.')]
