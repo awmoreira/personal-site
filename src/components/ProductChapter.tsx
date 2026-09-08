@@ -168,10 +168,17 @@ export default function ProductChapter({ lang }: { lang: Locale }) {
                 <div className="venture-copy">
                   <h4>{product.promise}</h4>
                   <p>{product.delivery}</p>
-                  <a className="venture-visit micro" href={product.href}>
+                  <a
+                    className="venture-visit micro"
+                    href={product.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {t.visit}
                     <span aria-hidden="true">↗</span>
-                    <span className="sr-only"> — {product.name}</span>
+                    <span className="sr-only">
+                      {` — ${product.name} (${lang === "pt" ? "abre em nova aba" : "opens in a new tab"})`}
+                    </span>
                   </a>
                 </div>
               </div>
