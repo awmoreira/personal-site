@@ -107,52 +107,33 @@ export default async function Home({
       </header>
       <main>
         <section
-          className="hero"
+          className="hero compact-hero"
           id="about"
           data-anchor
           aria-labelledby="intro-heading"
         >
-          <div className="portrait-stage">
-            <div className="identity">
-              <p className="micro strong">ALLAN WINCKLER</p>
-              <p className="micro">
-                {t.location}
-                <br />
-                15+ {lang === "en" ? "YEARS BUILDING" : "ANOS CONSTRUINDO"}
-                <br />
-                GMT−3 · {lang === "en" ? "REMOTE" : "REMOTO"}
-              </p>
-            </div>
+          <div className="hero-editorial">
             <figure className="portrait">
               <Image
                 src="/portrait.jpg"
                 alt={t.portrait}
                 width={800}
                 height={800}
-                sizes="(max-width: 600px) 260px, 344px"
+                sizes="(max-width: 700px) 96px, 160px"
                 fetchPriority="high"
                 preload
               />
-              <figcaption className="micro">{t.photoCaption}</figcaption>
             </figure>
-            <div className="current">
-              <p className="micro accent">{t.now}</p>
-              <p className="current-company">The Access Group</p>
-              <p className="micro">
-                {lang === "pt"
-                  ? "ONLINE ORDERING · KIOSK"
-                  : "ONLINE ORDERING · KIOSK"}
-                <br />
-                {lang === "en"
-                  ? "ENGINEERING & LEADERSHIP"
-                  : "ENGENHARIA & LIDERANÇA"}
+            <div className="intro">
+              <p className="micro hero-name">ALLAN WINCKLER</p>
+              <p className="micro accent eyebrow">{t.eyebrow}</p>
+              <h1 id="intro-heading">{t.headline}</h1>
+              <p className="intro-copy">{t.intro}</p>
+              <p className="hero-context micro">
+                <span>{t.location} · {lang === "pt" ? "REMOTO" : "REMOTE"}</span>
+                <span>{t.now} · The Access Group</span>
               </p>
             </div>
-          </div>
-          <div className="intro">
-            <p className="micro accent eyebrow">{t.eyebrow}</p>
-            <h1 id="intro-heading">{t.headline}</h1>
-            <p className="intro-copy">{t.intro}</p>
           </div>
           <a className="journey-link micro" href="#trajectory">
             {t.explore}
