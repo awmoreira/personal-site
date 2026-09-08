@@ -63,3 +63,14 @@ The scroll remains native. A normalized SVG stroke draws the opening curve; Inte
 `src/components/DeliveryVisual.tsx` presents a distinct conceptual diagram for each experience. Keep EN/PT labels in sync and use only confirmed work. The Gavea case is based on the author’s additional account: a shared library/BFF for state and backend access across mobile and web/Electron, plus a full mobile refactor without AI assistance. Lighthouse is no longer used as a career highlight. Product anchors remain stable even as their presentation evolves.
 
 The QikServe / The Access Group split uses September 2024 as the corporate acquisition milestone, rather than a change of products or squad. Both phases cover Online Ordering and Kiosk Ordering. The author places menu-manager/POS consolidation and end-to-end Devin AI workflows in the Access phase. Acquisition source: https://resources.qikserve.com/news/the-access-group-announces-the-acquisition-of-hospitality-digital-order-and-pay-specialist-qikserve .
+
+
+## Product Engineer positioning
+
+The opening `products` chapter is separate from employment dates. Founder status and creation from conception for Pinubi, BeChess and Berdy were confirmed by Allan. Product descriptions reflect their public websites as reviewed on 2026-09-07. No customer counts, revenue, dates or sole-founder claims are inferred. Historical job titles remain unchanged.
+
+Edit `src/lib/products.ts` for EN/PT product copy, destination URLs and the reasoning revealed under each product. `src/components/ProductChapter.tsx` contains conceptual product illustrations, explicitly captioned as illustrations. Stable anchors: `#products`, `#pinubi`, `#bechess`, `#berdy`. Language switching preserves the open product details and reading position.
+
+Sources: https://pinubi.com/pt · https://www.bechess.com.br/ · https://berdy.com.br/
+
+Regenerate sharing images and resume content with `node --experimental-strip-types scripts/build-og.mjs` and `node --experimental-strip-types scripts/export-content.mjs`; then run `scripts/build-resumes.py` with Python/ReportLab.

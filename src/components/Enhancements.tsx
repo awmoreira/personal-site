@@ -135,7 +135,6 @@ export default function Enhancements({
       if (raw) {
         const value = JSON.parse(raw) as Position;
         if (value.target === lang) saved = value;
-        sessionStorage.removeItem("journey-position");
       }
     } catch {
       /* Navigation remains functional without storage. */
@@ -146,18 +145,36 @@ export default function Enhancements({
         const detail = document.getElementById(id);
         if (detail instanceof HTMLDetailsElement) detail.open = true;
       });
-      document.fonts.ready.then(() => {
-        if (!alive) return;
-        const anchor = document.getElementById(position.anchor);
-        if (anchor)
-          window.scrollTo({
-            top:
-              window.scrollY +
-              anchor.getBoundingClientRect().top -
-              position.offset,
-            behavior: "instant",
-          });
-        schedule();
+      const pageReady =
+        document.readyState === "complete"
+          ? Promise.resolve()
+          : new Promise<void>((resolve) =>
+              window.addEventListener("load", () => resolve(), { once: true }),
+            );
+      Promise.all([document.fonts.ready, pageReady]).then(() => {
+        // Restore after the browser has applied its initial URL fragment scroll.
+        requestAnimationFrame(() =>
+          requestAnimationFrame(() => {
+            if (!alive) return;
+            const anchor = document.getElementById(position.anchor);
+            if (anchor)
+              window.scrollTo({
+                top:
+                  window.scrollY +
+                  anchor.getBoundingClientRect().top -
+                  position.offset,
+                behavior: "instant",
+              });
+            if (anchor)
+              history.replaceState(history.state, "", `#${position.anchor}`);
+            try {
+              sessionStorage.removeItem("journey-position");
+            } catch {
+              /* Storage is optional. */
+            }
+            schedule();
+          }),
+        );
       });
     }
     const savePosition = (event: Event) => {
@@ -190,6 +207,8 @@ export default function Enhancements({
             ).map((el) => el.id),
           }),
         );
+        // A native fragment scroll can race the precise position restoration.
+        link.hash = "";
       } catch {
         /* The URL fragment provides a fallback. */
       }

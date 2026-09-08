@@ -36,8 +36,8 @@ def footer(canvas, doc):
 
 for lang, t in data['content'].items():
     en = lang == 'en'
-    elements = [para('ALLAN WINCKLER MOREIRA', 'NameCustom'), para('Senior Software Engineer | Tech Lead & Architect', 'RoleCustom'), para('Porto Alegre, Brazil | Remote | awmoreira@gmail.com', 'SmallCustom'), Paragraph('<link href="https://github.com/awmoreira">github.com/awmoreira</link> | <link href="https://www.linkedin.com/in/awmoreira/">linkedin.com/in/awmoreira</link>', styles['SmallCustom'])]
-    elements += [para('PROFILE' if en else 'PERFIL', 'LabelCustom'), para(t['intro']), para('15+ years in web development and 7+ years in mobile. Technical leadership across frontend architecture, distributed backend systems and engineering quality.' if en else 'Mais de 15 anos em desenvolvimento web e mais de 7 anos em mobile. Liderança técnica em arquitetura frontend, sistemas backend distribuídos e qualidade de engenharia.')]
+    elements = [para('ALLAN WINCKLER MOREIRA', 'NameCustom'), para('Product Engineer | Founder', 'RoleCustom'), para('Porto Alegre, Brazil | Remote | awmoreira@gmail.com', 'SmallCustom'), Paragraph('<link href="https://github.com/awmoreira">github.com/awmoreira</link> | <link href="https://www.linkedin.com/in/awmoreira/">linkedin.com/in/awmoreira</link>', styles['SmallCustom'])]
+    elements += [para('PROFILE' if en else 'PERFIL', 'LabelCustom'), para(t['intro']), para('Founder and creator of Pinubi (creator discovery), BeChess (AI chess coaching) and Berdy (shared WhatsApp support), from conception. 15+ years in web development and 7+ years in mobile.' if en else 'Fundador e criador de Pinubi (descoberta para creators), BeChess (coach de xadrez com IA) e Berdy (atendimento compartilhado no WhatsApp), desde a concepção. Mais de 15 anos em web e mais de 7 em mobile.')]
     elements.append(para('EXPERIENCE' if en else 'EXPERIÊNCIA', 'LabelCustom'))
     for index, fact in enumerate(data['facts']):
         if fact['id'] == 'leadup':

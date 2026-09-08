@@ -42,6 +42,10 @@ try {
     for (const id of [
       "about",
       "trajectory",
+      "products",
+      "pinubi",
+      "bechess",
+      "berdy",
       "work",
       "access",
       "qikserve",
@@ -51,10 +55,13 @@ try {
       "contact",
     ])
       assert(html.includes(`id="${id}"`), `Missing ${id}`);
-    assert.equal((html.match(/<details\b/g) || []).length, 4);
+    assert.equal((html.match(/<details\b/g) || []).length, 7);
     assert(html.includes("mailto:awmoreira@gmail.com"));
     assert(html.includes(`https://personal-site-six-sandy.vercel.app/${lang}`));
     assert(html.includes("application/ld+json"));
+    assert(html.indexOf('id="products"') < html.indexOf('id="access"'));
+    assert(html.includes("Product Engineer"));
+    for (const url of ["https://pinubi.com/pt", "https://www.bechess.com.br", "https://berdy.com.br"]) assert(html.includes(`href="${url}"`));
     assert(html.indexOf('id="access"') < html.indexOf('id="gavea"'));
     const visible = html
       .replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "")

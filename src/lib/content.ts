@@ -123,14 +123,14 @@ export const content: Record<Locale, Copy> = {
     now: "NOW",
     formerly: "FORMERLY",
     location: "PORTO ALEGRE, BRAZIL",
-    eyebrow: "SENIOR SOFTWARE ENGINEER · TECH LEAD & ARCHITECT",
-    headline: "I build products people can rely on.",
+    eyebrow: "PRODUCT ENGINEER · FOUNDER",
+    headline: "I turn real problems into products.",
     intro:
-      "For over 15 years, I’ve been building web applications and connecting the details of a good user experience to the systems behind it. Today, I lead engineers, shape architecture and stay close to the code.",
+      "I connect product thinking, user experience and full-stack engineering to take ideas into production. With 15+ years building software, I lead a squad at The Access Group and create independent products from their conception. AI is part of how I build; ownership stays with me.",
     explore: "Explore my journey",
     portrait:
       "Allan Winckler in New York, with the Statue of Liberty in the background",
-    photoCaption: "ENGINEERING · PRODUCT · PEOPLE",
+    photoCaption: "PRODUCT · ENGINEERING · AI",
     impact: "WHAT I HELPED CHANGE",
     contribution: "Explore my contribution",
     closeContribution: "Close details",
@@ -236,14 +236,14 @@ export const content: Record<Locale, Copy> = {
       "Interfaces, distributed services or a team finding its rhythm. I bring the same attention to clarity, quality and the next person who will use or maintain the work.",
     contactTitle: "Let’s talk about what’s next.",
     contactBody:
-      "Have an engineering challenge or an opportunity in mind? I’d be glad to hear about your product and your team.",
+      "Building a product or looking for a Product Engineer who can own the journey from problem to delivery? I’d be glad to hear about your team.",
     copy: "Copy email",
     copied: "Email copied",
     copyFailed: "Select the email address above to copy it.",
     back: "Back to top",
     footer: "A little of my story. Built with care.",
     description:
-      "Allan Winckler — Senior Software Engineer, Tech Lead & Architect. 15+ years building web applications, resilient systems and engineering teams.",
+      "Allan Winckler — Product Engineer & Founder. Creator of Pinubi, BeChess and Berdy. Product thinking, full-stack engineering and AI, from conception to production.",
     journeyNote: "A FEW CHAPTERS, FROM NOW TO THE BEGINNING",
   },
   pt: {
@@ -254,14 +254,14 @@ export const content: Record<Locale, Copy> = {
     now: "AGORA",
     formerly: "ANTIGA",
     location: "PORTO ALEGRE, BRASIL",
-    eyebrow: "SENIOR SOFTWARE ENGINEER · TECH LEAD & ARCHITECT",
-    headline: "Construo produtos em que as pessoas podem confiar.",
+    eyebrow: "PRODUCT ENGINEER · FUNDADOR",
+    headline: "Transformo problemas reais em produtos.",
     intro:
-      "Há mais de 15 anos construo aplicações web, conectando os detalhes de uma boa experiência aos sistemas que a sustentam. Hoje, lidero engenheiros, desenho arquiteturas e continuo próximo do código.",
+      "Conecto visão de produto, experiência do usuário e engenharia full stack para levar ideias à produção. Com mais de 15 anos construindo software, lidero uma squad na The Access Group e crio produtos independentes desde a concepção. A IA faz parte de como construo; a responsabilidade continua comigo.",
     explore: "Percorrer minha trajetória",
     portrait:
       "Allan Winckler em Nova York, com a Estátua da Liberdade ao fundo",
-    photoCaption: "ENGENHARIA · PRODUTO · PESSOAS",
+    photoCaption: "PRODUTO · ENGENHARIA · IA",
     impact: "O QUE AJUDEI A TRANSFORMAR",
     contribution: "Ver minha contribuição",
     closeContribution: "Fechar detalhes",
@@ -368,14 +368,14 @@ export const content: Record<Locale, Copy> = {
       "Interfaces, serviços distribuídos ou uma equipe encontrando seu ritmo. Levo a mesma atenção à clareza, à qualidade e à próxima pessoa que vai usar ou manter esse trabalho.",
     contactTitle: "Vamos conversar sobre o próximo capítulo.",
     contactBody:
-      "Tem um desafio de engenharia ou uma oportunidade em mente? Vou gostar de conhecer seu produto e sua equipe.",
+      "Está construindo um produto ou buscando um Product Engineer que acompanhe o caminho do problema à entrega? Vou gostar de conhecer sua equipe.",
     copy: "Copiar e-mail",
     copied: "E-mail copiado",
     copyFailed: "Selecione o endereço acima para copiá-lo.",
     back: "Voltar ao início",
     footer: "Um pouco da minha história. Construído com cuidado.",
     description:
-      "Allan Winckler — Senior Software Engineer, Tech Lead & Architect. Mais de 15 anos construindo aplicações web, sistemas confiáveis e equipes de engenharia.",
+      "Allan Winckler — Product Engineer e fundador. Criador de Pinubi, BeChess e Berdy. Produto, engenharia full stack e IA, da concepção à produção.",
     journeyNote: "ALGUNS CAPÍTULOS, DO AGORA AO COMEÇO",
   },
 };

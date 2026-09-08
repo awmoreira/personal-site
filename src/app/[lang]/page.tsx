@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Locale links deliberately perform document navigation to restore the localized root, expanded details and reading offset together. */
+import ProductChapter from "@/components/ProductChapter";
 import DeliveryVisual from "@/components/DeliveryVisual";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
-  const title = "Allan Winckler — Software Engineer & Tech Lead";
+  const title = "Allan Winckler — Product Engineer & Founder";
   return {
     title,
     description: content[lang].description,
@@ -72,8 +73,8 @@ export default async function Home({
           <a className="desktop-link" href="#trajectory">
             {t.journey}
           </a>
-          <a className="desktop-link" href={profile.linkedin}>
-            LinkedIn ↗
+          <a className="desktop-link" href="#products">
+            {lang === "pt" ? "Produtos" : "Products"}
           </a>
           <a href={cv} download>
             {t.cv} ↓
@@ -188,6 +189,7 @@ export default async function Home({
               <div className="track-fill" />
             </div>
             <ol className="chapters">
+              <ProductChapter lang={lang} />
               {facts.map((fact, i) => {
                 const story = t.stories[fact.id];
                 return (
@@ -199,9 +201,9 @@ export default async function Home({
                     key={fact.id}
                   >
                     <a href={`#${fact.id}`} className="year" data-reveal="date">
-                      <span>{i === 0 ? t.now : fact.year}</span>{" "}
+                      <span>{fact.year}</span>{" "}
                       <span className="year-caption">
-                        {i === 0 ? "2024" : `0${i + 1}`}
+                        {i === 0 ? t.now : `0${i + 2}`}
                       </span>
                     </a>
                     <span
@@ -342,7 +344,7 @@ export default async function Home({
             alternateName: profile.name,
             url: `${site}/${lang}`,
             image: `${site}/portrait.jpg`,
-            jobTitle: "Senior Software Engineer · Tech Lead & Architect",
+            jobTitle: "Product Engineer & Founder",
             sameAs: [profile.linkedin, profile.github],
           }),
         }}

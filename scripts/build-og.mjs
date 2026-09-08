@@ -37,7 +37,7 @@ for (const lang of ["en", "pt"]) {
         h(
           "span",
           { style: { color: "#4255c7", fontSize: 18 } },
-          lang === "en" ? "SOFTWARE · SYSTEMS · PEOPLE" : "SOFTWARE · SISTEMAS · PESSOAS",
+          lang === "en" ? "PRODUCT · ENGINEERING · AI" : "PRODUTO · ENGENHARIA · IA",
         ),
       ),
       h(
@@ -61,7 +61,7 @@ for (const lang of ["en", "pt"]) {
           h(
             "div",
             { style: { marginTop: 30, fontSize: 20, color: "#65676e" } },
-            "Senior Software Engineer · Tech Lead & Architect",
+            "Product Engineer · Founder",
           ),
         ),
         h("img", {
